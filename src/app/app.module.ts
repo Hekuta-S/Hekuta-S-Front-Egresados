@@ -42,6 +42,10 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { TablaFiltroComponent } from './screens/tabla-filtro/tabla-filtro.component';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CheckComponent } from './components/check/check.component';
+import { BarrasComponent } from './components/barras/barras.component';
+import { ChartModule } from 'primeng/chart';
+import { GraficosComponent } from './screens/graficos/graficos.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'habitaciones', component: HabitacionesComponent },
@@ -53,6 +57,8 @@ const routes: Routes = [
   { path: 'filtro', component: FiltroComponent },
   { path: 'tabla-filtro', component: TablaFiltroComponent },
   { path: 'check', component: CheckComponent },
+  { path: 'barras', component: BarrasComponent },
+  { path: 'graficos', component: GraficosComponent },
   
   // otras rutas
 ];
@@ -63,7 +69,7 @@ const routes: Routes = [
     HabitacionesComponent,
     InventarioComponent,
     FacturaComponent, 
-    LoginComponent, TablaComponent, FiltroComponent, TablaFiltroComponent, CheckComponent,
+    LoginComponent, TablaComponent, FiltroComponent, TablaFiltroComponent, CheckComponent, BarrasComponent, GraficosComponent,
   
   ],
 
@@ -76,7 +82,7 @@ const routes: Routes = [
  AutoCompleteModule,
     SidebarModule,
     MenubarModule,
-   
+   ChartModule,
     MatChipsModule,
     InputSwitchModule,
     HttpClientModule ,

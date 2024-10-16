@@ -9,19 +9,24 @@ export class FiltroComponent {
   nameTerm: string = '';
   cedulaTerm: string = '';
   selectedPrograma: string = '';
-  selectedUnidad: string = ''; // Agrega esto para el dropdown de Unidad
+  selectedUnidad: string = '';
   selectedDate: string = '';
 
-  // Programas y unidades disponibles
   @Input() programas: string[] = [];
-  @Input() unidades: string[] = []; // Agrega esto para las Unidades
+  @Input() unidades: string[] = [];
+  @Input() selectedCategories: any[] = [];
 
   @Output() nameSearchEvent = new EventEmitter<string>();
   @Output() cedulaSearchEvent = new EventEmitter<string>();
   @Output() programaSearchEvent = new EventEmitter<string>();
-  @Output() unidadSearchEvent = new EventEmitter<string>(); // Agrega esto para la Unidad
+  @Output() unidadSearchEvent = new EventEmitter<string>();
   @Output() dateSearchEvent = new EventEmitter<string>();
 
+
+
+  isCategorySelected(key: string): boolean {
+    return this.selectedCategories.some(category => category.key === key);
+  }
   onNameInputChange(event: any) {
     this.nameTerm = event.target.value.toLowerCase();
     this.nameSearchEvent.emit(this.nameTerm);
@@ -38,9 +43,8 @@ export class FiltroComponent {
   }
 
   onUnidadChange(event: any) {
-    this.selectedUnidad = event.target.value; // Captura el valor seleccionado de Unidad
-    console.log('Unidad seleccionada:', this.selectedUnidad); // Log para depuración
-    this.unidadSearchEvent.emit(this.selectedUnidad); // Emite el valor de Unidad
+    this.selectedUnidad = event.target.value;
+    this.unidadSearchEvent.emit(this.selectedUnidad);
   }
 
   onDateChange(event: any) {
