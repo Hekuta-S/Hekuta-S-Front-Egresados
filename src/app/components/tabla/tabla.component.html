@@ -1,0 +1,24 @@
+<div class="card bg-white shadow-md rounded p-4">
+  <h3 class="text-lg font-bold mb-4">Lista de Estudiantes</h3>
+
+  <p-table [value]="estudiantes">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Cédula</th>
+        <th>Nombres</th>
+        <th>Código del Programa</th>
+        <th>Fecha de Ingreso</th>
+        <th>Carrera</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-estudiante>
+      <tr>
+        <td>{{ estudiante.PEGE_DOCUMENTOIDENTIDAD }}</td>
+        <td>{{ estudiante.NOMBRES }}</td>
+        <td>{{ estudiante.PROG_CODIGOPROGRAMA }}</td>
+        <td>{{ estudiante.FECHA_INGRESO_ESTP }}</td>
+        <td>{{ estudiante.PROGRAMA }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

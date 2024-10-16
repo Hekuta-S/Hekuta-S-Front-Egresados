@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="left-section">
+   
+
+    <div class="check-container">
+      <app-check></app-check> <!-- Componente check alineado a la izquierda -->
+    </div>
+  </div>
+
+  <div class="right-section">
+    <app-filtro 
+    [programas]="programas" 
+    [unidades]="unidades"
+    (nameSearchEvent)="filterByName($event)" 
+    (cedulaSearchEvent)="filterByCedula($event)"
+    (programaSearchEvent)="filterByPrograma($event)"
+    (unidadSearchEvent)="filterByUnidad($event)" 
+    (dateSearchEvent)="filterByDate($event)">
+  </app-filtro>
+    <app-tabla [estudiantes]="filteredStudents"></app-tabla>
+  </div>
+</div>

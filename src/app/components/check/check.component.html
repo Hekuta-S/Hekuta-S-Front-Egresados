@@ -1,0 +1,19 @@
+<div class="custom-card-container">
+    <p-card header="Selección de Categorías" class="custom-card">
+      <div class="flex flex-col gap-2">
+        <div *ngFor="let category of categories" class="field-checkbox">
+          <p-checkbox
+            [inputId]="category.key"
+            name="group"
+            [value]="category"
+            [(ngModel)]="selectedCategories"
+            class="checkbox-control"
+          ></p-checkbox>
+          <label [for]="category.key" class="ml-2 checkbox-label">
+            {{ category.name }}
+          </label>
+        </div>
+      </div>
+    </p-card>
+  </div>
+  

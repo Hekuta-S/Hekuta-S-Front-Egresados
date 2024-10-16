@@ -1,0 +1,23 @@
+@import "primeicons/primeicons.css"; /* Importa los íconos de PrimeNG */
+
+.custom-card-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  }
+  
+  .custom-card {
+    width: 300px; /* Reduce el ancho de la tarjeta */
+    border: 2px ; /* Borde verde */
+    margin-left: 20px; /* Espaciado a la izquierda si es necesario */
+  }
+  
+  .checkbox-label {
+    color: green; /* Texto en verde */
+  }
+  
+  .checkbox-control {
+    --p-checkbox-checked-background: green; /* Fondo del checkbox cuando está seleccionado */
+    --p-checkbox-checked-border-color: green; /* Borde del checkbox cuando está seleccionado */
+    --p-checkbox-icon-checked-color: white; /* Color del icono en el checkbox cuando está seleccionado */
+  }
+  

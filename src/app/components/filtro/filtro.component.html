@@ -1,0 +1,38 @@
+<div class="card flex flex-col justify-center mb-4 gap-4">
+  <!-- Input para filtrar por cédula -->
+  <input 
+    type="text" 
+    placeholder="Buscar por cédula" 
+    (input)="onCedulaInputChange($event)" 
+    [(ngModel)]="cedulaTerm"
+    class="autocomplete-input"
+  />
+
+  <!-- Input para filtrar por nombre -->
+  <input 
+    type="text" 
+    placeholder="Buscar por nombre" 
+    (input)="onNameInputChange($event)" 
+    [(ngModel)]="nameTerm"
+    class="autocomplete-input"
+  />
+
+  <!-- Dropdown para seleccionar Programa -->
+  <select (change)="onProgramaChange($event)" [(ngModel)]="selectedPrograma" class="autocomplete-input">
+    <option value="">Seleccionar Programa</option>
+    <option *ngFor="let programa of programas" [value]="programa">{{ programa }}</option>
+  </select>
+
+  <!-- Dropdown para seleccionar Unidad -->
+  <select (change)="onUnidadChange($event)" [(ngModel)]="selectedUnidad" class="autocomplete-input">
+    <option value="">Seleccionar Unidad</option>
+    <option *ngFor="let unidad of unidades" [value]="unidad">{{ unidad }}</option>
+  </select>
+
+  <!-- Input para filtrar por fecha -->
+  <input 
+    type="date" 
+    (change)="onDateChange($event)" 
+    class="autocomplete-input"
+  />
+</div>

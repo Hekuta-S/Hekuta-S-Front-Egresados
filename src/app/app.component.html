@@ -1,0 +1,31 @@
+<div class="card flex justify-content-between align-items-center p-2 gap-3">
+  <button class="custom-button" (click)="toggleSidebar()">
+    <i class="pi pi-bars custom-icon glow-on-hover"></i>
+  </button>
+  <span class="text-lg font-bold glow-on-hover">Estudiante</span>
+</div>
+<p-sidebar [(visible)]="sidebarVisible">
+  <ng-template pTemplate="header">
+    <div class="flex align-items-center gap-2">
+      <p-avatar 
+                    image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
+                    shape="circle" />
+                <span class="font-bold">
+                    user 
+                </span>
+    </div>
+  </ng-template>
+  <button class="sidebar-button" routerLink="/tabla-filtro">
+    <i class="pi pi-receipt"></i>
+    <span>Estudiantes</span>
+  </button>
+  <div class="sidebar-buttons">
+    <button class="sidebar-button" routerLink="/login">
+      <i class="pi pi-users"></i>
+      <span>Graficos</span>
+    </button>
+   
+  </div>
+</p-sidebar>
+<router-outlet></router-outlet>
+

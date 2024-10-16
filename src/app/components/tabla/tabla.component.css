@@ -1,0 +1,26 @@
+@import "primeicons/primeicons.css"; /* Importa los íconos de PrimeNG */
+/* Estilos para la tarjeta */
+.tabla-container {
+  padding: 20px;
+  margin-left: 320px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #2e7d32;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f1f8e9;
+}

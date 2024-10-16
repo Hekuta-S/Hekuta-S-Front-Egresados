@@ -1,0 +1,35 @@
+
+<div class="blur-background"></div>
+
+<div class="login-container">
+  <div class="form-container">
+    <div>
+      <form class="form">
+        <div class="p-field p-grid">
+          <div class="card flex justify-content-center example-full-width input-container">
+            <div class="form-group gap-2">
+              <fa-icon [icon]="faUser" class="mr-3"></fa-icon>
+              <label for="user" class="mb-2">Usuario/Correo</label>
+              <input pInputText id="user" [(ngModel)]="username" name="usuario" class="text-lg py-2 w-full px-3 rounded-md shadow-md border border-gray-300" required />
+            </div>
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <div class="card flex justify-content-center example-full-width input-container">
+            <div class="form-group">
+              <fa-icon [icon]="lockIcon" class="mr-3"></fa-icon>
+              <label for="password">Contraseña</label>
+              <input pInputText id="contraseña" [(ngModel)]="password" name="password" class="text-lg py-2 px-3 rounded-md shadow-md border border-gray-300" required />
+              <div class="pt-5 w-full">
+                <button class="btn-custom" (click)="registrarUsuario()">Ingresar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="items-center item-resent-contra bg-gray-200 p-5 m-5">
+        <a href="">¿Has olvidado tu contraseña? <span class="text-orange-500">Restablecer contraseña</span></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+@import "primeicons/primeicons.css"; /* Importa los íconos de PrimeNG */
+
+.filtro-container {
+  background-color: #e6f7e6;
+  padding: 20px;
+  width: 300px;
+  border-right: 2px solid #2e7d32;
+  height: 100vh;
+}
+
+.filtro-container h2 {
+  color: #2e7d32;
+}
+
+.filtro-container label {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.filtro-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #2e7d32;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}

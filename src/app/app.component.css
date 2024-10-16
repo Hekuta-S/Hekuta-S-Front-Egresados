@@ -1,0 +1,78 @@
+@import "primeicons/primeicons.css"; /* Importa los íconos de PrimeNG */
+
+/* Estilos para la tarjeta superior */
+/* Cambiar el fondo del sidenav a rosa */
+.p-sidebar {
+  background-color: green; /* Fondo color rosa */
+}
+
+/* Alinear "Estudiante" a la izquierda en el header */
+.card {
+  display: flex;
+  justify-content: flex-start; /* Alinear elementos al inicio (izquierda) */
+  align-items: center;
+  padding: 0.5rem;
+  background-color: green; /* Fondo de la card */
+  border-bottom: 1px solid #dee2e6;
+}
+
+.custom-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-icon {
+  color: white;
+  font-size: 1.5em;
+}
+
+.text-lg {
+  margin-left: 1rem; /* Separar el texto del botón */
+  font-weight: bold;
+}
+
+.glow-on-hover:hover {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(255, 204, 94),
+      0 0 70px rgb(255, 204, 94), 0 0 80px rgb(255, 204, 94), 0 0 100px rgb(255, 204, 94), 0 0 150px rgb(255, 204, 94);
+  }
+  100% {
+    color: initial;
+    text-shadow: none;
+  }
+}
+
+/* Botones del sidebar */
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-button:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar-button i {
+  font-size: 24px;
+}
+
+.sidebar-button span {
+  font-size: 16px;
+}

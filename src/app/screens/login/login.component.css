@@ -1,0 +1,134 @@
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+}
+
+.form {
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.input-container {
+    margin-bottom: 1rem; /* Agregamos margen inferior para separar los campos de entrada */
+}
+
+/* Estilos para el input */
+.input-container input {
+    width: 100%;
+    padding: 1rem 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease; /* Transición suave para el color del borde */
+}
+
+/* Estilos para el borde del input cuando está enfocado */
+.input-container input:focus {
+    border-color: var(--orange-500, #f97316); /* Color naranja cuando el input está enfocado */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    box-shadow: 0 0 5px var(--orange-500, #f97316); /* Añadir sombra al focus */
+}
+
+.orange-buttom{
+    padding: 2rem;
+    margin: 2rem;
+    
+}
+
+.item-resent-contra{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f3f4f6;
+}
+
+.btn-custom {
+    background-color: #d87a00;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .btn-custom fa-icon {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+  }
+  
+  .btn-custom:hover {
+    background-color: darkorange; /* Cambiar color al pasar el ratón */
+  }
+  
+  .btn-custom:active {
+    background-color: orangered; /* Cambiar color al hacer clic */
+  }
+  
+  
+
+  .blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.elgrafico.mx/sites/default/files/styles/f5-689x388/public/field/image/portadaolakase.jpg?itok=pJbU-mQ_');
+    background-size: cover;
+    filter: blur(5px); /* Ajusta el nivel de difuminado según sea necesario */
+  }
+  
+  /* styles.css */
+
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://th.bing.com/th/id/OIP.QrGGhF49DVcITcevIILGQAHaE7?pid=ImgDet&w=474&h=315&rs=1'); /* Ajusta la ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Ajusta el nivel de difuminado según sea necesario */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+  }
+  
+  .login-container {
+    position: relative;
+    z-index: 10; /* Asegura que esté encima del fondo difuminado */
+    width: 100%; /* Ocupa el ancho completo */
+    height: 100%; /* Ocupa la altura completa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  form {
+    background-color: transparent; /* Hace que el formulario sea transparente */
+  }
+  
+  .items-center.item-resent-contra {
+    background-color: transparent; /* Hace que el item-resent-contra sea transparente */
+    padding: 5px;
+    margin: 20px;
+  }

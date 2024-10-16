@@ -1,0 +1,26 @@
+.main-container {
+  display: flex;              /* Usa flexbox para organizar en columnas */
+  justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
+  gap: 20px;                   /* Espacio entre las columnas */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column; /* Coloca el filtro y el check en columna */
+  flex: 1;               /* Ocupará menos espacio que la tabla */
+}
+
+.check-container {
+  display: flex;               /* Flexbox para el contenedor del check */
+  justify-content: flex-start; /* Alinea el check a la izquierda */
+}
+
+.right-section {
+  flex: 3;               /* La tabla ocupará más espacio */
+}
+
+.card {
+  width: 250px;             /* Ajusta el ancho de la card */
+  border: 2px solid green;  /* Bordes verdes para la card */
+  margin-top: 20px;         /* Espaciado entre filtro y check */
+}
