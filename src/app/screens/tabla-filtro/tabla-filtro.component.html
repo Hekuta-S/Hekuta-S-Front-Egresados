@@ -1,25 +1,26 @@
 <div class="main-container">
   <div class="left-section">
     <div class="check-container">
-      <!-- Emitir las categorías seleccionadas desde 'check' -->
       <app-check (selectedCategoriesChange)="onSelectedCategoriesChange($event)"></app-check>
     </div>
   </div>
 
   <div class="right-section">
-    <!-- Pasar las categorías seleccionadas al componente 'filtro' -->
+    <!-- Componente para cargar el archivo Excel -->
+    <app-cargar-excel (dataEmit)="onExcelDataReceived($event)"></app-cargar-excel>
+
     <app-filtro 
-      [programas]="programas" 
-      [unidades]="unidades"
-      [selectedCategories]="selectedCategories"
-      (nameSearchEvent)="onNameSearch($event)"
-      (cedulaSearchEvent)="onCedulaSearch($event)"
-      (programaSearchEvent)="onProgramaSearch($event)"
-      (unidadSearchEvent)="onUnidadSearch($event)"
-      (dateSearchEvent)="onDateSearch($event)">
-    </app-filtro>
-    
-    <!-- Usar el componente tabla para mostrar estudiantes filtrados -->
+    [programas]="programas" 
+    [unidades]="unidades"
+    [selectedCategories]="selectedCategories"
+    (nameSearchEvent)="onNameSearch($event)"
+    (cedulaSearchEvent)="onCedulaSearch($event)"
+    (programaSearchEvent)="onProgramaSearch($event)"
+    (unidadSearchEvent)="onUnidadSearch($event)"
+    (dateSearchEvent)="onDateSearch($event)">
+  </app-filtro>
+  
+
     <app-tabla [estudiantes]="filteredStudents"></app-tabla>
   </div>
 </div>

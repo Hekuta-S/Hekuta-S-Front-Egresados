@@ -6,16 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./graficos.component.css']
 })
 export class GraficosComponent {
-  // Lista de estudiantes (puedes reemplazarla con los datos reales)
   estudiantes = [
-    { PROGRAMA: 'Ingeniería' },
-    { PROGRAMA: 'Medicina' },
-    { PROGRAMA: 'Ingeniería' },
-    { PROGRAMA: 'Derecho' },
-    { PROGRAMA: 'hola' },
-    { PROGRAMA: 'Medicina' },
-    { PROGRAMA: 'Medicina' },
-    { PROGRAMA: 'Medicina' },
-    { PROGRAMA: 'Ingeniería' }
+    {
+      PROGRAMA: 'Ingeniería',
+      PENG_SEXO: 'M',
+      NOMBRES: 'Carlos Andrés Martínez Gómez'
+    },
+    {
+      PROGRAMA: 'Ingeniería',
+      PENG_SEXO: 'F',
+      NOMBRES: 'Ana María López Pérez'
+    },
+    {
+      PROGRAMA: 'Medicina',
+      PENG_SEXO: 'M',
+      NOMBRES: 'Luis Alberto Pérez Díaz'
+    },
+    {
+      PROGRAMA: 'Medicina',
+      PENG_SEXO: 'F',
+      NOMBRES: 'María Fernanda Romero'
+    }
+    // Añade más estudiantes aquí
   ];
 }

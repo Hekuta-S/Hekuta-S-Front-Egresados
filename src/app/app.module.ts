@@ -32,9 +32,7 @@ import { AppComponent } from './app.component';
 import { UserService } from './services/user.service';
 import { HabitacionesComponent } from './screens/habitaciones/habitaciones.component';
 import { InventarioComponent } from './screens/inventario/inventario.component';
-import { FacturaComponent } from './screens/factura/factura.component'; 
 import { MatChipsModule } from '@angular/material/chips';
-import { CategoriaComponent } from './screens/categoria/categoria.component';
 import { LoginComponent } from './screens/login/login.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { FiltroComponent } from './components/filtro/filtro.component';
@@ -45,20 +43,23 @@ import { CheckComponent } from './components/check/check.component';
 import { BarrasComponent } from './components/barras/barras.component';
 import { ChartModule } from 'primeng/chart';
 import { GraficosComponent } from './screens/graficos/graficos.component';
+import { DobleBarrasComponent } from './components/doble-barras/doble-barras.component';
+import { CargarExcelComponent } from './controllers/cargar-excel/cargar-excel.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'habitaciones', component: HabitacionesComponent },
   { path: 'inventario', component: InventarioComponent },
-  { path: 'facturas', component: FacturaComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'categorias', component: CategoriaComponent },
   { path: 'tabla', component: TablaComponent },
   { path: 'filtro', component: FiltroComponent },
   { path: 'tabla-filtro', component: TablaFiltroComponent },
   { path: 'check', component: CheckComponent },
   { path: 'barras', component: BarrasComponent },
   { path: 'graficos', component: GraficosComponent },
+  { path: 'cargaexcel', component: CargarExcelComponent },
+
+
   
   // otras rutas
 ];
@@ -67,9 +68,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HabitacionesComponent,
-    InventarioComponent,
-    FacturaComponent, 
-    LoginComponent, TablaComponent, FiltroComponent, TablaFiltroComponent, CheckComponent, BarrasComponent, GraficosComponent,
+    InventarioComponent, 
+    LoginComponent, TablaComponent, FiltroComponent, TablaFiltroComponent, CheckComponent, BarrasComponent, GraficosComponent, DobleBarrasComponent, CargarExcelComponent,
   
   ],
 
@@ -86,6 +86,7 @@ const routes: Routes = [
     MatChipsModule,
     InputSwitchModule,
     HttpClientModule ,
+    ChartModule,
     MatInputModule,
     FormsModule,
    MatFormFieldModule,

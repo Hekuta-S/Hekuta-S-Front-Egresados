@@ -24,7 +24,7 @@ export class FiltroComponent {
 
 
 
-  isCategorySelected(key: string): boolean {
+   isCategorySelected(key: string): boolean {
     return this.selectedCategories.some(category => category.key === key);
   }
   onNameInputChange(event: any) {
